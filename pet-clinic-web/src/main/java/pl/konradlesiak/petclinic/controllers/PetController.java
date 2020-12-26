@@ -4,10 +4,10 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 
 @Controller
-public class VetController {
+public class PetController {
 
-    @GetMapping({"/vets", "vets.html"})
-    public String getVets() {
-        return "vets/vets";
+    @GetMapping({"/pets", "/pets.html"})
+    public String getPets() {
+        return "pets/pets";
     }
 }
