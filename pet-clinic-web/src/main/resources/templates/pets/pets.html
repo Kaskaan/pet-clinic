@@ -12,6 +12,7 @@
         <tr>
             <th>ID</th>
             <th>Pet type</th>
+            <th>Pet name</th>
             <th>Birth date</th>
             <th>Owner's Name</th>
         </tr>
@@ -20,6 +21,7 @@
         <tr th:each="pet : ${pets}">
             <td th:text="${pet.getId()}"></td>
             <td th:text="${pet.getPetType().getName()}"></td>
+            <td th:text="${pet.getPetName()}"></td>
             <td th:text="${pet.getBirthDate()}"></td>
             <td th:text="${pet.getOwner().getFirstName() + ' ' + pet.getOwner().getSecondName()}"></td>
         </tr>
