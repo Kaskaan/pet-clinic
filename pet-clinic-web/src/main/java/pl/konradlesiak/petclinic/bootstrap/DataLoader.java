@@ -27,8 +27,8 @@ public class DataLoader implements CommandLineRunner {
     @Override
     public void run(String... args) {
         Owner owner1 = new Owner();
-        owner1.setFirstName("Michael");
-        owner1.setSecondName("Weston");
+        owner1.setFirstName("Boglarka");
+        owner1.setSecondName("Palko");
 
         ownerService.save(owner1);
 
@@ -65,10 +65,19 @@ public class DataLoader implements CommandLineRunner {
 
         Pet pet1 = new Pet();
         pet1.setPetType(dog);
+        pet1.setPetName("Rex");
         pet1.setBirthDate(LocalDate.now().minusYears(2));
         pet1.setOwner(owner3);
 
         petService.save(pet1);
+
+        Pet pet2 = new Pet();
+        pet2.setPetType(dog);
+        pet2.setPetName("Kutyus");
+        pet2.setBirthDate(LocalDate.now().minusYears(1));
+        pet2.setOwner(owner1);
+
+        petService.save(pet2);
 
         System.out.println("Pets has been loaded...");
     }
