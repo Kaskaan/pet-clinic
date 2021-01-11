@@ -66,16 +66,25 @@ public class DataLoader implements CommandLineRunner {
         Owner owner1 = new Owner();
         owner1.setFirstName("Boglarka");
         owner1.setSecondName("Palko");
+        owner1.setAddress("17 Best St.");
+        owner1.setCity("Katowice");
+        owner1.setTelephone("7363466433");
         Owner savedOwnerBoglarka = ownerService.save(owner1);
 
         Owner owner2 = new Owner();
         owner2.setFirstName("Fiona");
         owner2.setSecondName("Glenanne");
+        owner2.setAddress("125 Oxford Rd.");
+        owner2.setCity("Reading");
+        owner2.setTelephone("7672645409");
         Owner savedOwnerFiona = ownerService.save(owner2);
 
         Owner owner3 = new Owner();
         owner3.setFirstName("Andrzej");
         owner3.setSecondName("Piaseczny");
+        owner3.setAddress("65 Island Rd.");
+        owner3.setCity("Reading");
+        owner3.setTelephone("7345167345");
         Owner savedOwnerAndrzej = ownerService.save(owner3);
 
         System.out.println("Owners has been loaded...");
