@@ -20,7 +20,7 @@
     <tr th:each="owner : ${owners}">
         <td th:text="${owner.getId()}"></td>
         <td th:text="${owner.getFirstName()}"></td>
-        <td th:text="${owner.getSecondName()}"></td>
+        <td th:text="${owner.getLastName()}"></td>
         <td>
             <a th:href="@{'/owners/' + ${owner.getId()}}">Get details</a>
         </td>
