@@ -90,6 +90,15 @@ public class DataLoader implements CommandLineRunner {
         owner3.setTelephone("7345167345");
         Owner savedOwnerAndrzej = ownerService.save(owner3);
 
+        Owner owner4 = Owner.builder()
+                .firstName("Konrad")
+                .lastName("Lesiak")
+                .address("99 Island Road")
+                .city("Slough")
+                .telephone("6665554443")
+                .build();
+        Owner savedOwnerKonrad = ownerService.save(owner4);
+
         System.out.println("Owners has been loaded...");
 
         Vet vet1 = new Vet();
@@ -119,6 +128,14 @@ public class DataLoader implements CommandLineRunner {
         pet2.setBirthDate(LocalDate.now().minusYears(1));
         pet2.setOwner(savedOwnerBoglarka);
         Pet savedPetKutyus = petService.save(pet2);
+
+        Pet pet3 = Pet.builder()
+                .petType(savedPetTypeDog)
+                .name("Rambo")
+                .birthDate(LocalDate.now().minusYears(3))
+                .owner(savedOwnerKonrad)
+                .build();
+        Pet savedPetRambo = petService.save(pet3);
 
         System.out.println("Pets has been loaded...");
 
