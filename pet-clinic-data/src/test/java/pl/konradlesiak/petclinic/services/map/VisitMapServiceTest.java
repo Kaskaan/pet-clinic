@@ -2,6 +2,7 @@ package pl.konradlesiak.petclinic.services.map;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
+import org.springframework.boot.test.context.SpringBootTest;
 import pl.konradlesiak.petclinic.model.Owner;
 import pl.konradlesiak.petclinic.model.Pet;
 import pl.konradlesiak.petclinic.model.Visit;
@@ -11,6 +12,7 @@ import java.util.Set;
 
 import static org.junit.jupiter.api.Assertions.*;
 
+@SpringBootTest(classes = VisitMapService.class)
 class VisitMapServiceTest {
 
     Visit visit1;

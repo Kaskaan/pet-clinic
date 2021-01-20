@@ -2,12 +2,14 @@ package pl.konradlesiak.petclinic.services.map;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
+import org.springframework.boot.test.context.SpringBootTest;
 import pl.konradlesiak.petclinic.model.PetType;
 
 import java.util.Set;
 
 import static org.junit.jupiter.api.Assertions.*;
 
+@SpringBootTest(classes = PetTypeMapService.class)
 class PetTypeMapServiceTest {
 
     PetType petType1;

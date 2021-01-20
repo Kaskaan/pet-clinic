@@ -2,19 +2,19 @@ package pl.konradlesiak.petclinic.services.map;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.test.context.SpringBootTest;
 import pl.konradlesiak.petclinic.model.Owner;
 
 import java.util.Set;
 
 import static org.junit.jupiter.api.Assertions.*;
 
+@SpringBootTest(classes = OwnerMapService.class)
 class OwnerMapServiceTest {
 
     Owner owner1;
     Owner owner2;
 
-    @Autowired
     OwnerMapService ownerMapService;
 
     @BeforeEach
