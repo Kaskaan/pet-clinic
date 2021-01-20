@@ -11,8 +11,8 @@ import static org.junit.jupiter.api.Assertions.*;
 
 class OwnerMapServiceTest {
 
-    Owner owner1 = Owner.builder().id(1L).firstName("John").lastName("Wood").build();
-    Owner owner2 = Owner.builder().id(2L).firstName("Owen").lastName("Wilson").build();
+    Owner owner1;
+    Owner owner2;
 
     @Autowired
     OwnerMapService ownerMapService;
@@ -20,6 +20,8 @@ class OwnerMapServiceTest {
     @BeforeEach
     void setUp() {
         ownerMapService = new OwnerMapService(new PetTypeMapService(), new PetMapService());
+        owner1 = Owner.builder().id(1L).firstName("John").lastName("Wood").build();
+        owner2 = Owner.builder().id(2L).firstName("Owen").lastName("Wilson").build();
         ownerMapService.save(owner1);
     }
 
