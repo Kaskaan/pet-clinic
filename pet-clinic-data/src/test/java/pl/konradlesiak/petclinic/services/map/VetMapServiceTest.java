@@ -48,6 +48,7 @@ class VetMapServiceTest {
         assertEquals(2L, vetMapService.findAll().size());
     }
 
+    @Test
     void findByIdNotNull() {
         final Vet vetFromService = vetMapService.findById(vet1.getId());
         assertNotNull(vetFromService);
