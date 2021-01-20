@@ -22,7 +22,7 @@ public class OwnerController {
     }
 
     @GetMapping({"/owners/{id}", "/owners/{id}.html"})
-    public String getOwners(Model model, @PathVariable Long id) {
+    public String getOwner(Model model, @PathVariable Long id) {
         model.addAttribute("owner", ownerService.findById(id));
         return "owners/owner";
     }
