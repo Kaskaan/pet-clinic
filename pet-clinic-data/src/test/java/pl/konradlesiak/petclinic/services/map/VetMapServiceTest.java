@@ -2,7 +2,6 @@ package pl.konradlesiak.petclinic.services.map;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-import org.springframework.boot.test.context.SpringBootTest;
 import pl.konradlesiak.petclinic.model.Vet;
 
 import java.util.HashSet;
@@ -11,7 +10,6 @@ import java.util.Set;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotNull;
 
-@SpringBootTest(classes = SpecialityMapService.class)
 class VetMapServiceTest {
 
     Vet vet1;
